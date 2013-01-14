@@ -1,0 +1,11 @@
+Høst 2012	TEP4515 	Termisk energi, fordypningsemne	Muntlig	Muntlig	04.12.2012	10006	B	7,5	[statistikk]	02-jan-2013
+Høst 2012	TIØ4215 	Kontraktsrett og kontraktsforhandlinger	Skriftlig	Skriftlig	06.12.2012	10033	B	7,5	[statistikk]	07-jan-2013
+Vår 2012	TDT4102 	Prosedyre- og objektorientert programmering	Skriftlig	Skriftlig	19.05.2012	10574	A	7,5	[statistikk]	07-jun-2012
+Vår 2012	TEP4160 	Aerodynamikk	Skriftlig	Skriftlig	09.06.2012	10035	C	7,5	[statistikk]	29-jun-2012
+Vår 2012	TEP4195 	Turbomaskiner	Skriftlig	Skriftlig	29.05.2012	10010	B	7,5	[statistikk]	15-jun-2012
+Vår 2012	TMM4850 	Eksperter i team - Instrumentering og styring over Internett	Arbeider	Arbeider		10003	B	7,5	[statistikk]	
+Høst 2011	TEP4156 	Viskøse strømninger og grensesjikt	Skriftlig	Skriftlig	16.12.2011	10052	D	7,5		
+Høst 2011	TEP4185 	Industriell prosess- og energiteknikk	Skriftlig/Arbeider	Skriftlig/Arbeider		10066	C	7,5		
+Høst 2011	TEP4240 	Systemsimulering	Skriftlig/Arbeider	Skriftlig/Arbeider		10003	C	7,5		
+Høst 2011	TIØ4146 	Finans for teknisk-naturvitenskapelige studenter	Skriftlig	Skriftlig	07.12.2011	10312	C	7,5		
+Vår 2011	PSY1050 	Personalpsykologi	Skriftlig	Flervalgseksamen	07.06.2011	10050	Manglende Øvinger		
