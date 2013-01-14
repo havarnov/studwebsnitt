@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 
 from flask import Flask
 from flask import render_template, request, flash, url_for, redirect, session
@@ -93,4 +94,5 @@ def index():
 if __name__ == "__main__":
     app.secret_key = SECRET
     app.debug = True
-    app.run()
+    port = int(os.environ.get('PORT', 5000))
+    app.run(host='0.0.0.0', port=port)
