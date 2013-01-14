@@ -10,6 +10,7 @@ from wtforms import Form, TextAreaField, PasswordField, validators
 
 from settings import SECRET
 
+# dictionary to translate grade to number grade
 GRADE_DICT = {
         'a': 5,
         'b': 4,
@@ -18,6 +19,7 @@ GRADE_DICT = {
         'e': 1,
         }
 
+# dictinary to translate number grade to grade
 NUMBER_DICT= {
         5: 'a',
         4: 'b',
@@ -26,6 +28,7 @@ NUMBER_DICT= {
         1: 'e',
         }
 
+# function to determine if an str can be casted to an float.
 def is_float(str):
     try:
         float(str)
@@ -34,6 +37,9 @@ def is_float(str):
         return False
 
 class Subject(object):
+    """Class for holding info about an subject.
+
+    """
     
     def __init__(self, date, code, name, grade, points):
         self.date = date
@@ -43,6 +49,10 @@ class Subject(object):
         self.points = points
 
 def listify_subjects(subjects):
+    """This function will translate all the Subject objects in 
+    the input variable into a tuple with all the data.
+
+    """
     result = []
     for subject in subjects:
         result.append((
@@ -54,8 +64,11 @@ def listify_subjects(subjects):
     return result
 
 class StudwebCopyForm(Form):
+    """
+    A helper class for making forms. Inherits from wtforms.Form.
+
+    """
     copy = TextAreaField("CopyPaste fra Studweb", [validators.Required()])
-    #copy = TextAreaField("CopyPaste fra Studweb", [validators.Required()])
 
 app = Flask(__name__)
 
