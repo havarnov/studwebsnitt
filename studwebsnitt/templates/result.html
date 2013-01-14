@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block header %}
+<h1>Studwebsnitt</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="well">
+    <h2>Ditt snitt er: {{ snitt }} ( {{ bokstav_snitt }} )</h2>
+</div>
+<div class="well">
+    <h2>Snittet er regnet ut fra følgende fag</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <td>Semester</td>
+                <td>Fagkode</td>
+                <td>Fagnavn</td>
+                <td>Karakter</td>
+                <td>Studiepoeng</td>
+            </tr>
+        </thead>
+        <tbody>
+            {% for subject in subjects %}
+            <tr>
+                {% for field in subject %}
+                <td>{{ field }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+{% endblock %}

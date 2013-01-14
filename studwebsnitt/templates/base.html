@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  {% block head %}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{ url_for('.static', filename='css/bootstrap.min.css') }}">
+  <script type="text/javascript" src="{{ url_for('.static', filename='js/jquery.js') }}"></script>
+  <script type="text/javascript" src="{{ url_for('.static', filename='js/bootstrap.js') }}"></script>
+  <title>{% block title %}{% endblock %}Studwebsnitt</title>
+  {% endblock %}
+</head>
+<body>
+  <div class="container">
+    {% block header %}{% endblock %}
+
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-block alert-success fade in out" data-alert="alert">
+      <button class="close" data-dismiss="alert">&times;</button>
+
+      {{ message }}
+    </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}    
+
+    <div id="content">{% block content %}{% endblock %}</div>
+    <div id="footer">
+      {% block footer %}
+      &copy; Copyright 2012 by <a href="http://domain.invalid/">Håvar Nøvik</a>.
+      {% endblock %}
+    </div>
+  </div>
+</body>

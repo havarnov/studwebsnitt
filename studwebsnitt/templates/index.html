@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% from "_formhelpers.html" import form_fields %}
+
+{% block header %}
+<h1>Studwebsnitt</h1>
+{% endblock %}
+
+{% block content %}
+
+<div class="row-fluid">
+    <div class="span8 well">
+        <form method="POST" action="." id="login-form" class="">
+            <fieldset>
+                <div class="control-group">
+                    <label class="control-label" for="copy"><h2>CopyPaste fra Studweb</h2></label>
+                    <div class="controls">
+                        {{ form.copy(class="span", rows="10")|safe }}
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary btn-large">Submit</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <div class="span4 well">
+        <h2>Hjelp</h2>
+        <ul>
+            <li>Logg inn på <a href="https://studweb.ntnu.no">https://ntnu.studweb.no</a></li>
+            <li>Navigér til "Oversikt <i class="icon-arrow-right"></i> Resultater"</li>
+            <li>Merk og kopier alle fag som du ønsker å regne ut snittet fra. Slik:</li>
+            <a class="" data-toggle="modal" href="#myModal" >
+                <img class="thumbnail" src="{{ url_for('.static', filename='img/karakterer.png') }}">
+            </a>
+            <li>Lim inn i tekstboksen til venstre</li>
+        </ul>
+    </div>
+</div>
+
+<div class="modal hide" id="myModal" style="width:70%;max-width:90%;margin-left:-35%">
+    <button type="button" class="close" data-dismiss="modal">Close</button>
+    <img src="{{ url_for('.static', filename='img/karakterer.png') }}">
+</div>
+
+
+{% endblock %}
